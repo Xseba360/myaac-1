@@ -50,7 +50,7 @@ $twig->addFunction($function);
 $function = new Twig_SimpleFunction('getLink', function ($s) {
 	global $config;
 	if($config['friendly_urls'])
-		return $s;
+		return BASE_URL . $s;
 	
 	return '?' . $s;
 });
